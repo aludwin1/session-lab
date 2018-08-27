@@ -19,6 +19,11 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use((req, res, next) => {
+  console.log('SESSION: ', req.session);
+  next();
+});
+
 app.get('/', (req, res, next) => {
   res.send('Hello');
 });
